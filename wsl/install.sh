@@ -7,7 +7,7 @@ set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 TOOLS_DIR="$DOTFILES_DIR/wsl/tools"
-TOTAL_STEPS=8
+TOTAL_STEPS=9
 STEP=0
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
@@ -42,7 +42,11 @@ echo "║                                                                    ║
 echo "╚══════════════════════════════════════════════════════════════════════╝"
 echo ""
 
-# ── [1/8] Atualizar sistema ─────────────────────────────────────────────────
+# ── [1/9] Rede e DNS ────────────────────────────────────────────────────────
+step "🌐 Configurando rede e DNS..."
+run_tool "network.sh"
+
+# ── [2/9] Atualizar sistema ─────────────────────────────────────────────────
 step "📦 Atualizando sistema..."
 sudo apt-get update -y
 sudo apt-get upgrade -y
@@ -54,23 +58,23 @@ sudo apt-get install -y \
     build-essential \
     software-properties-common
 
-# ── [2/8] Linguagens via asdf ────────────────────────────────────────────────
+# ── [3/9] Linguagens via asdf ────────────────────────────────────────────────
 step "🔀 Instalando linguagens via asdf (Node, Ruby, Python, Kotlin)..."
 run_tool "asdf.sh"
 
-# ── [3/8] Docker Engine ─────────────────────────────────────────────────────
+# ── [4/9] Docker Engine ─────────────────────────────────────────────────────
 step "🐳 Instalando Docker Engine..."
 run_tool "docker.sh"
 
-# ── [4/8] Android ADB bridge ────────────────────────────────────────────────
+# ── [5/9] Android ADB bridge ────────────────────────────────────────────────
 step "📱 Configurando Android ADB bridge..."
 run_tool "android.sh"
 
-# ── [5/8] CLI Tools ─────────────────────────────────────────────────────────
+# ── [6/9] CLI Tools ─────────────────────────────────────────────────────────
 step "🔧 Instalando CLI tools..."
 run_tool "cli-tools.sh"
 
-# ── [6/8] Symlinks ──────────────────────────────────────────────────────────
+# ── [7/9] Symlinks ──────────────────────────────────────────────────────────
 step "🔗 Criando symlinks..."
 
 create_symlink() {
@@ -89,7 +93,7 @@ create_symlink "$DOTFILES_DIR/wsl/.gitconfig" "$HOME/.gitconfig"
 
 echo "✅ Symlinks criados!"
 
-# ── [7/8] Configurar Zsh como shell padrão ──────────────────────────────────
+# ── [8/9] Configurar Zsh como shell padrão ──────────────────────────────────
 step "🐚 Configurando Zsh..."
 if [ "$SHELL" != "$(which zsh)" ]; then
     echo "   → Definindo Zsh como shell padrão..."
@@ -99,13 +103,14 @@ else
     echo "   → Zsh já é o shell padrão."
 fi
 
-# ── [8/8] Resumo final ──────────────────────────────────────────────────────
+# ── [9/9] Resumo final ──────────────────────────────────────────────────────
 step "✅ Ambiente pronto!"
 
 echo "╔══════════════════════════════════════════════════════════════════════╗"
 echo "║  📋 RESUMO DA INSTALAÇÃO                                          ║"
 echo "╠══════════════════════════════════════════════════════════════════════╣"
 echo "║                                                                    ║"
+echo "║  ✅ Rede & DNS configurados (OpenDNS + Fallback)                   ║"
 echo "║  ✅ Sistema atualizado                                             ║"
 echo "║  ✅ asdf + Node.js, Ruby, Python, Kotlin                            ║"
 echo "║  ✅ Docker Engine + Compose                                        ║"

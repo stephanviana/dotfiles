@@ -91,17 +91,18 @@ chmod +x wsl/install.sh wsl/tools/*.sh
 ./wsl/install.sh
 ```
 
-O instalador executa em 8 etapas:
+O instalador executa em 9 etapas:
 
 ```
-[1/8] 📦 Atualiza sistema e instala dependências base
-[2/8] 🔀 asdf (Go binary) + Node.js, Ruby, Python, Kotlin
-[3/8] 🐳 Docker Engine + Compose
-[4/8] 📱 Android ADB bridge + scrcpy
-[5/8] 🔧 CLI tools (fzf, ripgrep, zoxide, gh, jq, Oh My Zsh)
-[6/8] 🔗 Symlinks (.zshrc → ~/.zshrc, .gitconfig → ~/.gitconfig)
-[7/8] 🐚 Zsh como shell padrão
-[8/8] ✅ Resumo final
+[1/9] 🌐 Rede e DNS (OpenDNS FamilyShield + Fallback Cloudflare)
+[2/9] 📦 Atualiza sistema e instala dependências base
+[3/9] 🔀 asdf (Go binary) + Node.js, Ruby, Python, Kotlin
+[4/9] 🐳 Docker Engine + Compose
+[5/9] 📱 Android ADB bridge + scrcpy
+[6/9] 🔧 CLI tools (fzf, ripgrep, zoxide, gh, jq, Oh My Zsh)
+[7/9] 🔗 Symlinks (.zshrc → ~/.zshrc, .gitconfig → ~/.gitconfig)
+[8/9] 🐚 Zsh como shell padrão
+[9/9] ✅ Resumo final
 ```
 
 > ⏱ **Tempo estimado:** 15–25 minutos (Ruby e Python compilam do fonte)
@@ -277,6 +278,7 @@ dotfiles/
     ├── .zshrc             # Config do Zsh: asdf, aliases, Docker, ADB
     ├── .gitconfig         # Config do Git: usuário, editor, aliases
     └── tools/
+        ├── network.sh     # Fix DNS: OpenDNS + Fallback + /etc/wsl.conf
         ├── asdf.sh        # asdf v0.16+ + Node, Ruby, Python, Kotlin
         ├── docker.sh      # Docker Engine + Compose (systemd-aware)
         ├── android.sh     # ADB bridge + scrcpy + instruções USBIPD
