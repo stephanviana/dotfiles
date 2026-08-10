@@ -103,9 +103,8 @@ if (-not $needsReboot) {
 Write-Step "[3] Instalando apps via Winget..."
 
 $Apps = @(
-    @{ Id = "Anysphere.Cursor";           Name = "Cursor" },
+    @{ Id = "Bitwarden.Bitwarden";        Name = "Bitwarden" },
     @{ Id = "Microsoft.VisualStudioCode"; Name = "VS Code" },
-    @{ Id = "Git.Git";                    Name = "Git" },
     @{ Id = "Google.AndroidStudio";       Name = "Android Studio" },
     @{ Id = "dorssel.usbipd-win";         Name = "USBIPD" }
 )

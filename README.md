@@ -10,9 +10,8 @@ Setup automatizado para ambiente de desenvolvimento em WSL 2 (Ubuntu) com integr
 
 | App | Descrição |
 |-----|-----------|
-| **Cursor** | Editor de código com AI |
+| **Bitwarden** | Gerenciador de senhas |
 | **VS Code** | Editor de código |
-| **Git** | Controle de versão |
 | **Android Studio** | Desenvolvimento Android |
 | **USBIPD** | Ponte USB → WSL (para ADB físico) |
 
@@ -30,6 +29,9 @@ Setup automatizado para ambiente de desenvolvimento em WSL 2 (Ubuntu) com integr
 | **Docker Compose** | Orquestração de containers |
 | **Android ADB bridge** | Ponte TCP via USBIPD (método Akita) |
 | **scrcpy** | Espelhamento de tela Android |
+| **Antigravity CLI** (`agy`) | Assistente IA agentico do Google |
+| **OpenCode CLI** | Agente IA open-source |
+| **Codex CLI** | Assistente de código IA |
 | **fzf** | Busca fuzzy no terminal |
 | **ripgrep** | Grep turbinado |
 | **zoxide** | Navegação inteligente entre pastas |

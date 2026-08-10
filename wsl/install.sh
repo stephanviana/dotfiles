@@ -115,7 +115,7 @@ echo "║  ✅ Sistema atualizado                                             �
 echo "║  ✅ asdf + Node.js, Ruby, Python, Kotlin                            ║"
 echo "║  ✅ Docker Engine + Compose                                        ║"
 echo "║  ✅ Android ADB bridge + scrcpy                                    ║"
-echo "║  ✅ CLI tools (zsh, fzf, ripgrep, zoxide, gh, jq)                  ║"
+echo "║  ✅ CLI tools (zsh, fzf, ripgrep, zoxide, gh, jq, agy, opencode, codex) ║"
 echo "║  ✅ Symlinks (.zshrc, .gitconfig)                                  ║"
 echo "║  ✅ Zsh como shell padrão                                          ║"
 echo "║                                                                    ║"

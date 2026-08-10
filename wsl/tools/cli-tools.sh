@@ -80,11 +80,38 @@ fi
 echo "   → Instalando jq..."
 sudo apt-get install -y -qq jq
 
+# ── Antigravity CLI (agy) ───────────────────────────────────────────────────
+echo "   → Instalando Antigravity CLI (agy)..."
+if ! command -v agy &> /dev/null; then
+    curl -fsSL https://antigravity.google/cli/install.sh | bash || true
+else
+    echo "     Antigravity CLI já instalado, pulando..."
+fi
+
+# ── OpenCode CLI ─────────────────────────────────────────────────────────────
+echo "   → Instalando OpenCode CLI..."
+if ! command -v opencode &> /dev/null; then
+    curl -fsSL https://opencode.ai/install | bash || true
+else
+    echo "     OpenCode CLI já instalado, pulando..."
+fi
+
+# ── Codex CLI ────────────────────────────────────────────────────────────────
+echo "   → Instalando Codex CLI..."
+if ! command -v codex &> /dev/null; then
+    curl -fsSL https://chatgpt.com/codex/install.sh | sh || true
+else
+    echo "     Codex CLI já instalado, pulando..."
+fi
+
 echo ""
 echo "✅ CLI tools instalados!"
-echo "   zsh:     $(zsh --version)"
-echo "   fzf:     $(~/.fzf/bin/fzf --version 2>/dev/null || echo 'instalado')"
-echo "   ripgrep: $(rg --version | head -1)"
-echo "   zoxide:  $(zoxide --version 2>/dev/null || echo 'instalado')"
-echo "   gh:      $(gh --version | head -1)"
-echo "   jq:      $(jq --version)"
+echo "   zsh:         $(zsh --version)"
+echo "   fzf:         $(~/.fzf/bin/fzf --version 2>/dev/null || echo 'instalado')"
+echo "   ripgrep:     $(rg --version | head -1)"
+echo "   zoxide:      $(zoxide --version 2>/dev/null || echo 'instalado')"
+echo "   gh:          $(gh --version | head -1)"
+echo "   jq:          $(jq --version)"
+echo "   antigravity: $(agy --version 2>/dev/null || echo 'instalado')"
+echo "   opencode:    $(opencode --version 2>/dev/null || echo 'instalado')"
+echo "   codex:       $(codex --version 2>/dev/null || echo 'instalado')"
