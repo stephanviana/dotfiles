@@ -103,16 +103,18 @@ if (-not $needsReboot) {
 Write-Step "[3] Instalando apps via Winget..."
 
 $Apps = @(
-    @{ Id = "Bitwarden.Bitwarden";        Name = "Bitwarden" },
-    @{ Id = "Microsoft.VisualStudioCode"; Name = "VS Code" },
-    @{ Id = "Google.AntigravityIDE";      Name = "Antigravity IDE" },
-    @{ Id = "Google.AndroidStudio";       Name = "Android Studio" },
-    @{ Id = "dorssel.usbipd-win";         Name = "USBIPD" },
-    @{ Id = "Microsoft.DotNet.SDK.10";    Name = ".NET 10 SDK" },
-    @{ Id = "abbodi1406.vcredist";         Name = "Visual C++ Redistributables (AIO 2005-2022+)" },
-    @{ Id = "JRSoftware.InnoSetup";       Name = "Inno Setup" },
-    @{ Id = "XP8CLZL93F5Z4P";             Name = "NVIDIA App (Drivers)" },
-    @{ Id = "Nvidia.CUDA";                Name = "NVIDIA CUDA Toolkit" }
+    @{ Id = "Bitwarden.Bitwarden";                     Name = "Bitwarden" },
+    @{ Id = "Microsoft.VisualStudioCode";              Name = "VS Code" },
+    @{ Id = "Google.AntigravityIDE";                   Name = "Antigravity IDE" },
+    @{ Id = "JetBrains.IntelliJIDEA.Community";        Name = "IntelliJ IDEA Community" },
+    @{ Id = "Google.AndroidStudio";                    Name = "Android Studio" },
+    @{ Id = "dorssel.usbipd-win";                      Name = "USBIPD" },
+    @{ Id = "Microsoft.DotNet.SDK.10";                 Name = ".NET 10 SDK" },
+    @{ Id = "abbodi1406.vcredist";                      Name = "Visual C++ Redistributables (AIO 2005-2022+)" },
+    @{ Id = "JRSoftware.InnoSetup";                    Name = "Inno Setup" },
+    @{ Id = "Intel.IntelDriverAndSupportAssistant";    Name = "Intel Driver & Support Assistant" },
+    @{ Id = "XP8CLZL93F5Z4P";                          Name = "NVIDIA App (Drivers)" },
+    @{ Id = "Nvidia.CUDA";                             Name = "NVIDIA CUDA Toolkit" }
 )
 
 foreach ($App in $Apps) {
