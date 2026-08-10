@@ -94,7 +94,7 @@ chmod +x wsl/install.sh wsl/tools/*.sh
 O instalador executa em 9 etapas:
 
 ```
-[1/9] 🌐 Rede e DNS (OpenDNS FamilyShield + Fallback Cloudflare)
+[1/9] 🌐 Rede e DNS (OpenDNS FamilyShield Exclusivo)
 [2/9] 📦 Atualiza sistema e instala dependências base
 [3/9] 🔀 asdf (Go binary) + Node.js, Ruby, Python, Kotlin
 [4/9] 🐳 Docker Engine + Compose
@@ -278,7 +278,7 @@ dotfiles/
     ├── .zshrc             # Config do Zsh: asdf, aliases, Docker, ADB
     ├── .gitconfig         # Config do Git: usuário, editor, aliases
     └── tools/
-        ├── network.sh     # Fix DNS: OpenDNS + Fallback + /etc/wsl.conf
+        ├── network.sh     # Fix DNS: OpenDNS FamilyShield + /etc/wsl.conf
         ├── asdf.sh        # asdf v0.16+ + Node, Ruby, Python, Kotlin
         ├── docker.sh      # Docker Engine + Compose (systemd-aware)
         ├── android.sh     # ADB bridge + scrcpy + instruções USBIPD
