@@ -34,6 +34,12 @@ fpath=("${ASDF_DATA_DIR}/completions" $fpath)
 autoload -Uz compinit && compinit
 
 # ---------------------------------------------------------------------------
+# Java JDK (OpenJDK 17 LTS)
+# ---------------------------------------------------------------------------
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
+export PATH="$JAVA_HOME/bin:$PATH"
+
+# ---------------------------------------------------------------------------
 # Android ADB Bridge (ponte TCP — método Akita)
 # ---------------------------------------------------------------------------
 export ADB_SERVER_SOCKET=tcp:host.docker.internal:5037

@@ -56,7 +56,8 @@ sudo apt-get install -y \
     git \
     unzip \
     build-essential \
-    software-properties-common
+    software-properties-common \
+    openjdk-17-jdk
 
 # ── [3/9] Linguagens via asdf ────────────────────────────────────────────────
 step "🔀 Instalando linguagens via asdf (Node, Ruby, Python, Kotlin)..."

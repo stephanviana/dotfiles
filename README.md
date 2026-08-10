@@ -29,6 +29,7 @@ Setup automatizado para ambiente de desenvolvimento em WSL 2 (Ubuntu) com integr
 | Ferramenta | Descrição |
 |------------|-----------|
 | **Zsh + Oh My Zsh** | Shell moderno com plugins |
+| **OpenJDK 17 LTS** | JDK nativo para Gradle, Kotlin e Android |
 | **asdf v0.16+** | Gerenciador de versões unificado (Go binary) |
 | **Node.js** (latest) | Runtime JS + npm, yarn, pnpm |
 | **Ruby** (latest) | Linguagem Ruby |
