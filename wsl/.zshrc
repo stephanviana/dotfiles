@@ -36,7 +36,7 @@ autoload -Uz compinit && compinit
 # ---------------------------------------------------------------------------
 # Android ADB Bridge (ponte TCP — método Akita)
 # ---------------------------------------------------------------------------
-export ADB_SERVER_SOCKET=tcp:127.0.0.1:5037
+export ADB_SERVER_SOCKET=tcp:host.docker.internal:5037
 export ANDROID_HOME="$HOME/Android/Sdk"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 

@@ -87,7 +87,7 @@ if ($ScriptDir -and (Test-Path "$ScriptDir\.wslconfig")) {
     Write-Host "   OK .wslconfig copiado de $ScriptDir" -ForegroundColor Green
 } else {
     Write-Host "   -> Criando .wslconfig inline (execucao remota)..." -ForegroundColor Gray
-    $wslConfigContent = "[wsl2]`nmemory=4GB`nprocessors=4`nnetworkingMode=mirrored`ndnsTunneling=true`n"
+    $wslConfigContent = "[wsl2]`nmemory=4GB`nprocessors=4`nnetworkingMode=NAT`ndnsTunneling=true`n"
     Set-Content -Path "$env:USERPROFILE\.wslconfig" -Value $wslConfigContent -Encoding UTF8
     Write-Host "   OK .wslconfig criado em $env:USERPROFILE\" -ForegroundColor Green
 }
