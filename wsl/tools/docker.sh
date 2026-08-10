@@ -49,10 +49,7 @@ sudo usermod -aG docker "$USER"
 # ── Habilitar systemd no /etc/wsl.conf ───────────────────────────────────────
 echo "   → Configurando systemd=true em /etc/wsl.conf..."
 if ! grep -q "systemd=true" /etc/wsl.conf 2>/dev/null; then
-    sudo bash -c 'cat <<EOF >> /etc/wsl.conf
-[boot]
-systemd=true
-EOF'
+    printf '\n[boot]\nsystemd=true\n' | sudo tee -a /etc/wsl.conf > /dev/null
 fi
 
 # ── Habilitar serviço (systemd ou fallback) ──────────────────────────────────

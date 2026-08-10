@@ -110,7 +110,7 @@ echo "╔═══════════════════════�
 echo "║  📋 RESUMO DA INSTALAÇÃO                                          ║"
 echo "╠══════════════════════════════════════════════════════════════════════╣"
 echo "║                                                                    ║"
-echo "║  ✅ Rede & DNS configurados (OpenDNS + Fallback)                   ║"
+echo "║  ✅ Rede & DNS configurados (Mirrored + DNS Tunneling)              ║"
 echo "║  ✅ Sistema atualizado                                             ║"
 echo "║  ✅ asdf + Node.js, Ruby, Python, Kotlin                            ║"
 echo "║  ✅ Docker Engine + Compose                                        ║"

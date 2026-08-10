@@ -1,5 +1,5 @@
 [wsl2]
 memory=4GB
 processors=4
-networkingMode=NAT
+networkingMode=mirrored
 dnsTunneling=true
