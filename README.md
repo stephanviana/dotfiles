@@ -12,9 +12,15 @@ Setup automatizado para ambiente de desenvolvimento em WSL 2 (Ubuntu) com integr
 |-----|-----------|
 | **Bitwarden** | Gerenciador de senhas |
 | **VS Code** | Editor de código |
+| **Antigravity IDE** | IDE de desenvolvimento AI |
 | **Android Studio** | Desenvolvimento Android |
 | **USBIPD** | Ponte USB → WSL (para ADB físico) |
 | **Chocolatey** | Gerenciador de pacotes para Windows |
+| **.NET 10 SDK** | Kit de desenvolvimento .NET |
+| **Visual C++ Redist (AIO)** | Runtimes MSVC do 2005 ao 2022+ |
+| **Inno Setup** | Criador de instaladores para Windows |
+| **NVIDIA App** | Drivers de vídeo NVIDIA |
+| **NVIDIA CUDA Toolkit** | Plataforma de computação paralela/GPU |
 
 ### WSL 2 (Ubuntu)
 
