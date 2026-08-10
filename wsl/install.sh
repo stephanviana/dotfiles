@@ -57,7 +57,10 @@ sudo apt-get install -y \
     unzip \
     build-essential \
     software-properties-common \
-    openjdk-17-jdk
+    openjdk-17-jdk \
+    p7zip-full \
+    p7zip-rar \
+    ffmpeg
 
 # ── [3/9] Linguagens via asdf ────────────────────────────────────────────────
 step "🔀 Instalando linguagens via asdf (Node, Ruby, Python, Kotlin)..."

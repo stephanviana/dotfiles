@@ -114,7 +114,10 @@ $Apps = @(
     @{ Id = "JRSoftware.InnoSetup";                    Name = "Inno Setup" },
     @{ Id = "Intel.IntelDriverAndSupportAssistant";    Name = "Intel Driver & Support Assistant" },
     @{ Id = "XP8CLZL93F5Z4P";                          Name = "NVIDIA App (Drivers)" },
-    @{ Id = "Nvidia.CUDA";                             Name = "NVIDIA CUDA Toolkit" }
+    @{ Id = "Nvidia.CUDA";                             Name = "NVIDIA CUDA Toolkit" },
+    @{ Id = "RARLab.WinRAR";                           Name = "WinRAR" },
+    @{ Id = "7zip.7zip";                               Name = "7-Zip" },
+    @{ Id = "VideoLAN.VLC";                            Name = "VLC media player" }
 )
 
 foreach ($App in $Apps) {

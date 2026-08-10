@@ -23,6 +23,9 @@ Setup automatizado para ambiente de desenvolvimento em WSL 2 (Ubuntu) com integr
 | **Intel Driver & Support Assistant** | Utilitário oficial de drivers de vídeo Intel |
 | **NVIDIA App** | Drivers de vídeo NVIDIA |
 | **NVIDIA CUDA Toolkit** | Plataforma de computação paralela/GPU |
+| **WinRAR** | Compactador e descompactador de arquivos |
+| **7-Zip** | Compactador e descompactador open-source |
+| **VLC media player** | Reprodutor de mídia multimídia |
 
 ### WSL 2 (Ubuntu)
 
@@ -30,6 +33,8 @@ Setup automatizado para ambiente de desenvolvimento em WSL 2 (Ubuntu) com integr
 |------------|-----------|
 | **Zsh + Oh My Zsh** | Shell moderno com plugins |
 | **OpenJDK 17 LTS** | JDK nativo para Gradle, Kotlin e Android |
+| **p7zip-full / p7zip-rar** | Suporte completo a arquivos .7z e .rar |
+| **ffmpeg** | Manipulação e conversão de áudio e vídeo |
 | **asdf v0.16+** | Gerenciador de versões unificado (Go binary) |
 | **Node.js** (latest) | Runtime JS + npm, yarn, pnpm |
 | **Ruby** (latest) | Linguagem Ruby |
