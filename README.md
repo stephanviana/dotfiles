@@ -14,6 +14,7 @@ Setup automatizado para ambiente de desenvolvimento em WSL 2 (Ubuntu) com integr
 | **VS Code** | Editor de código |
 | **Android Studio** | Desenvolvimento Android |
 | **USBIPD** | Ponte USB → WSL (para ADB físico) |
+| **Chocolatey** | Gerenciador de pacotes para Windows |
 
 ### WSL 2 (Ubuntu)
 

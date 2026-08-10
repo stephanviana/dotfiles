@@ -113,8 +113,26 @@ foreach ($App in $Apps) {
     Install-WingetApp -Id $App.Id -Name $App.Name
 }
 
-# ── [4] Tarefa pos-reboot ────────────────────────────────────────────────────
-Write-Step "[4] Registrando tarefa pos-reboot..."
+# ── [4] Chocolatey ────────────────────────────────────────────────────────────
+Write-Step "[4] Verificando Chocolatey..."
+
+if (Get-Command choco -ErrorAction SilentlyContinue) {
+    Write-Host "   -> Chocolatey ja instalado, pulando..." -ForegroundColor Yellow
+} else {
+    Write-Host "   -> Instalando Chocolatey..." -ForegroundColor Gray
+    try {
+        Set-ExecutionPolicy Bypass -Scope Process -Force
+        [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
+        iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+        Write-Host "   OK Chocolatey instalado com sucesso!" -ForegroundColor Green
+    }
+    catch {
+        Write-Host "   AVISO: Falha ao instalar Chocolatey: $_" -ForegroundColor Red
+    }
+}
+
+# ── [5] Tarefa pos-reboot ────────────────────────────────────────────────────
+Write-Step "[5] Registrando tarefa pos-reboot..."
 
 $TaskName     = "DotfilesOpenUbuntu"
 $ExistingTask = Get-ScheduledTask -TaskName $TaskName -ErrorAction SilentlyContinue
@@ -144,6 +162,7 @@ if ($needsReboot) {
 }
 Write-Host "  OK  .wslconfig aplicado" -ForegroundColor Green
 Write-Host "  OK  Apps verificados/instalados via Winget" -ForegroundColor Green
+Write-Host "  OK  Chocolatey verificado/instalado" -ForegroundColor Green
 Write-Host "  OK  Tarefa pos-reboot registrada" -ForegroundColor Green
 Write-Host ""
 
