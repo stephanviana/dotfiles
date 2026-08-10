@@ -46,6 +46,15 @@ sudo apt-get install -y -qq \
 echo "   → Adicionando $USER ao grupo docker..."
 sudo usermod -aG docker "$USER"
 
+# ── Habilitar systemd no /etc/wsl.conf ───────────────────────────────────────
+echo "   → Configurando systemd=true em /etc/wsl.conf..."
+if ! grep -q "systemd=true" /etc/wsl.conf 2>/dev/null; then
+    sudo bash -c 'cat <<EOF >> /etc/wsl.conf
+[boot]
+systemd=true
+EOF'
+fi
+
 # ── Habilitar serviço (systemd ou fallback) ──────────────────────────────────
 if [ "$(ps -p 1 -o comm=)" = "systemd" ]; then
     echo "   → systemd detectado — habilitando via systemctl..."

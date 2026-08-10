@@ -3,6 +3,11 @@
 # =============================================================================
 
 # ---------------------------------------------------------------------------
+# PATH essencial (deve vir antes dos plugins do Oh My Zsh)
+# ---------------------------------------------------------------------------
+export PATH="$HOME/.local/bin:$PATH"
+
+# ---------------------------------------------------------------------------
 # Oh My Zsh
 # ---------------------------------------------------------------------------
 export ZSH="$HOME/.oh-my-zsh"
@@ -21,9 +26,8 @@ plugins=(
 source "$ZSH/oh-my-zsh.sh"
 
 # ---------------------------------------------------------------------------
-# asdf v0.16+ (binário Go — só precisa estar no PATH)
+# asdf v0.16+ (binário Go)
 # ---------------------------------------------------------------------------
-export PATH="$HOME/.local/bin:$PATH"
 export ASDF_DATA_DIR="$HOME/.asdf"
 # completions
 fpath=("${ASDF_DATA_DIR}/completions" $fpath)
@@ -32,7 +36,7 @@ autoload -Uz compinit && compinit
 # ---------------------------------------------------------------------------
 # Android ADB Bridge (ponte TCP — método Akita)
 # ---------------------------------------------------------------------------
-export ADB_SERVER_SOCKET=tcp:host.docker.internal:5037
+export ADB_SERVER_SOCKET=tcp:127.0.0.1:5037
 export ANDROID_HOME="$HOME/Android/Sdk"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
